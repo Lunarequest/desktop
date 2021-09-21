@@ -22,7 +22,7 @@ export function convertToFlatpakPath(path: string) {
     return path
   }
 
-  if (path.startsWith('/opt/') || path.startsWith("/var/lib/flatpak")) {
+  if (path.startsWith('/opt/') || path.startsWith('/var/lib/flatpak')) {
     return path
   }
 
@@ -33,8 +33,8 @@ export function formatWorkingDirectoryForFlatpak(path: string): string {
 }
 
 export function formatPathForFlatpak(path: string): string {
-  if (path.startsWith("/var/lib/flatpak/app")) {
-    return path.replace("/var/lib/flatpak/app/", "")
+  if (path.startsWith('/var/lib/flatpak/app')) {
+    return path.replace('/var/lib/flatpak/app/', '')
   }
   return path
 }
